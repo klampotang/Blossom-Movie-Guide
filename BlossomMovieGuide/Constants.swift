@@ -19,6 +19,9 @@ struct Constants {
     static let topRatedTVString = "Top Rated TV"
     
     static let movieFetchString = "movie"
+    static let tvFetchString = "tv"
+    static let topRatedFetchString = "top_rated"
+    static let trendingFetchString = "trending"
     
     static let playString = "Play"
     
