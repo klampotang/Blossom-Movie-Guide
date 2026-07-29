@@ -25,13 +25,13 @@ struct ContentView: View {
                 
             }
         }
+        .onAppear {
+            if let config = APIConfig.shared {
+            }
+        }
     }
 }
 
 #Preview {
     ContentView()
-}
-
-#Playground {
-    _ = 1 + 2
 }
