@@ -24,6 +24,8 @@ class ViewModel {
     var topRatedMovies: [Title] = []
     var topRatedTV: [Title] = []
     
+    var heroTitle = Title.previewTitles[0]
+    
     func getTitles() async {
         homeStatus = .fetching
         if trendingMovies.isEmpty {
@@ -37,6 +39,10 @@ class ViewModel {
                 trendingTV = try await tTV
                 topRatedMovies = try await trMovies
                 topRatedTV = try await trTV
+                
+                if let title = trendingMovies.randomElement() {
+                    heroTitle = title
+                }
 
                 homeStatus = .success
             } catch {
