@@ -18,6 +18,7 @@ class ViewModel {
     
     private(set) var homeStatus: FetchStatus = .notStarted
     private(set) var videoIdStatus: FetchStatus = .notStarted
+    private(set) var upcomingStatus: FetchStatus = .notStarted
     
     private let dataFetcher = DataFetcher()
     private let youtubeDataFetcher = YoutubeDataFetcher()
@@ -25,7 +26,7 @@ class ViewModel {
     var trendingTV: [Title] = []
     var topRatedMovies: [Title] = []
     var topRatedTV: [Title] = []
-    
+    var upcomingMovies: [Title] = []
     var heroTitle = Title.previewTitles[0]
     var videoId = ""
     
@@ -33,9 +34,9 @@ class ViewModel {
         homeStatus = .fetching
         if trendingMovies.isEmpty {
             do {
-                async let tMovies = dataFetcher.fetchTitles(for: Constants.movieFetchString, by: "trending")
+                async let tMovies = dataFetcher.fetchTitles(for: Constants.movieFetchString, by: Constants.trendingFetchString)
                 async let tTV =  dataFetcher.fetchTitles(for: Constants.tvFetchString, by: Constants.trendingFetchString)
-                async let trMovies = dataFetcher.fetchTitles(for: Constants.movieFetchString, by: "top_rated")
+                async let trMovies = dataFetcher.fetchTitles(for: Constants.movieFetchString, by: Constants.topRatedFetchString)
                 async let trTV = dataFetcher.fetchTitles(for: Constants.tvFetchString, by: Constants.topRatedFetchString)
                 
                 trendingMovies = try await tMovies
@@ -64,6 +65,16 @@ class ViewModel {
             videoIdStatus = .success
         } catch {
             videoIdStatus = .failed(underlyingError: error)
+        }
+    }
+    
+    func getUpcomingMovies() async {
+        upcomingStatus = .fetching
+        do {
+            upcomingMovies = try await dataFetcher.fetchTitles(for: Constants.movieFetchString, by: "upcoming")
+            upcomingStatus = .success
+        } catch {
+            upcomingStatus = .failed(underlyingError: error)
         }
     }
 }
