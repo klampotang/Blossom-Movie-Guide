@@ -1,10 +1,3 @@
-//
-//  YoutubePlayer.swift
-//  BlossomMovieGuide
-//
-//  Created by Kelly Lampotang on 7/29/26.
-//
-
 import SwiftUI
 import WebKit
 
@@ -18,8 +11,15 @@ struct YoutubePlayer: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        guard let baseURLString = youtubeBaseURL, let baseURL = URL(string: baseURLString) else { return }
+        guard let baseURLString = youtubeBaseURL,
+              let baseURL = URL(string: baseURLString) else {return}
         let fullURL = baseURL.appending(path: videoId)
-        webView.load(URLRequest(url: fullURL))
+        
+        var request = URLRequest(url: fullURL)
+                
+        // 2. Set a valid Referer header
+        request.setValue("https://github.com/BlossomBuild/BlossomMovie/tree/section-3-5/BlossomMovie", forHTTPHeaderField: "Referer")
+                
+        webView.load(request)
     }
 }
