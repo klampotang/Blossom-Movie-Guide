@@ -6,8 +6,13 @@
 	objectVersion = 90;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		882B9329301A670E0061015F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882B9328301A670E0061015F /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		000000000000000000000120 /* BlossomMovieGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlossomMovieGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		882B9328301A670E0061015F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -30,6 +35,7 @@
 		000000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
+				882B9328301A670E0061015F /* Assets.xcassets */,
 				000000000000000000000010 /* BlossomMovieGuide */,
 				000000000000000000000020 /* Products */,
 			);
@@ -102,6 +108,7 @@
 		000000000000000140000000 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				882B9329301A670E0061015F /* Assets.xcassets in Resources */,
 			);
 		};
 /* End PBXResourcesBuildPhase section */

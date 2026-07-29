@@ -1,0 +1,37 @@
+import SwiftUI
+import Playgrounds
+
+@main struct MyApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        TabView {
+            Tab(Constants.homeString, systemImage: Constants.homeIconString) {
+                HomeView()
+            }
+            Tab(Constants.upcomingString, systemImage: Constants.upcomingIconString) {
+                
+            }
+            Tab(Constants.searchString, systemImage: Constants.searchIconString) {
+                
+            }
+            Tab(Constants.downloadString, systemImage: Constants.downloadIconString) {
+                
+            }
+        }
+    }
+}
+
+#Preview {
+    ContentView()
+}
+
+#Playground {
+    _ = 1 + 2
+}
