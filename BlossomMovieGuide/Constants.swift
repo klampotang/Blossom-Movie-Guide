@@ -44,3 +44,10 @@ struct Constants {
         }
     }
 }
+
+enum YoutubeURLStrings: String {
+    case trailer = "trailer"
+    case queryShorten = "q"
+    case space = " "
+    case key = "key"
+}
