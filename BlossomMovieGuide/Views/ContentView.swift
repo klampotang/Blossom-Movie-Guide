@@ -25,10 +25,6 @@ struct ContentView: View {
                 
             }
         }
-        .onAppear {
-            if let config = APIConfig.shared {
-            }
-        }
     }
 }
 
