@@ -21,7 +21,6 @@ class SearchViewModel {
             } else {
                 searchTitles = try await dataFetcher.fetchTitles(for: media, by: "search", with: title)
             }
-            try
         } catch {
             print(error)
             errorMessage = error.localizedDescription
