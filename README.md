@@ -11,7 +11,8 @@ This project was built while following an iOS development tutorial on YouTube.
 - **Search** — Search for movies or TV shows, with a toggle to switch between the two.
 - **Title Detail** — Tapping any title fetches and plays its trailer (via an embedded YouTube player) alongside its overview.
 
-<!-- Screenshots coming soon! -->
+<img width="200" alt="Screenshot iPhone 17 Pro 07-29-2026 at 10 23 49 PM" src="https://github.com/user-attachments/assets/cd443ca6-b6c0-40b3-87e8-e173953f2394" />
+
 
 ## Tech Stack
 
@@ -76,11 +77,10 @@ BlossomMovieGuide/
 
 4. Open `BlossomMovieGuide.xcodeproj` in Xcode and hit Run.
 
-## Roadmap
+## Todo
 
 - [ ] Download button functionality
-- [ ] Additional screenshots/preview
 
 ## Acknowledgements
 
-Built by following a YouTube tutorial series on building a movie/TV guide app in SwiftUI.
+Built by following a YouTube tutorial series (https://www.youtube.com/watch?v=-VC3hIEL7eQ&t=12923s)
