@@ -10,6 +10,7 @@ import SwiftUI
 struct SearchView: View {
     var titles: [Title] = Title.previewTitles
     @State private var searchByMovies = true
+    @State private var searchText = ""
 
     var body: some View {
         NavigationStack {
@@ -40,6 +41,7 @@ struct SearchView: View {
                     }
                 }
             }
+            .searchable(text:  $searchText, prompt: searchByMovies ? Constants.movieSearchString : Constants.tvSearchString)
         }
     }
 }
