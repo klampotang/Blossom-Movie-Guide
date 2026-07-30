@@ -12,6 +12,9 @@ This project was built while following an iOS development tutorial on YouTube.
 - **Title Detail** — Tapping any title fetches and plays its trailer (via an embedded YouTube player) alongside its overview.
 
 <img width="200" alt="Screenshot iPhone 17 Pro 07-29-2026 at 10 23 49 PM" src="https://github.com/user-attachments/assets/cd443ca6-b6c0-40b3-87e8-e173953f2394" />
+<img width="200" alt="Screenshot iPhone 17 Pro 07-29-2026 at 10 23 59 PM" src="https://github.com/user-attachments/assets/f1933623-b9f7-4628-892d-39cc7fc67e13" />
+<img width="200" alt="Screenshot iPhone 17 Pro 07-29-2026 at 10 24 06 PM" src="https://github.com/user-attachments/assets/b7f88848-0b78-46c9-934b-297736a158f4" />
+<img width="200" alt="Screenshot iPhone 17 Pro 07-29-2026 at 10 23 38 PM" src="https://github.com/user-attachments/assets/3bb4aab9-a683-4563-b021-94dc035c700c" />
 
 
 ## Tech Stack
